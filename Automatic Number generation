@@ -1,0 +1,2 @@
+Dim numbers As IEnumerable(Of Integer) = Enumerable.Range(1, 1000) ' number generation
+Dim repeatedstring As String = String.Join(",", Enumerable.Repeat("VOID", 500)) ' same name generate repeatly.
