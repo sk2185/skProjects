@@ -1,0 +1,39 @@
+Some fixed string will use repeatly
+==========================================
+
+* If user wants to use the same string in multiple times. 
+* below code line wil help ful for that. 
+* Enumerable.Repeat(desired string , no of times repeat) this code line will helpful to generate repeated string. 
+
+VB.NET
+==========
+Dim repeatedstring As String = String.Join(",", Enumerable.Repeat("VOID", 500)) ' same name generate repeatly.
+
+
+Output
+=======
+"VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID"...."VOID" 
+
+this void generated 500 times with comma separated. 
+
+
+
+Convert to List
+====================
+ Dim lstRepeatedstring = repeatedstring.Split(",")
+
+* above code convert to string array. 
+
+Output
+=========
+"VOID"
+"VOID"
+"VOID"
+"VOID"
+"VOID"
+"VOID"
+.
+.
+.
+.
+"VOID" 
