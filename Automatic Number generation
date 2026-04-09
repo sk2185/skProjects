@@ -1,4 +1,19 @@
+* If user want to generate contiunes numbers between some of the ranges will use the below code line to generate to automatic numbers. 
+* Enumerable.Range(startrange, endrange) this code line will generate the automatic numbers between the ranges.
+
 VB.NET
 ============
 Dim numbers As IEnumerable(Of Integer) = Enumerable.Range(1, 1000) ' number generation
-Dim repeatedstring As String = String.Join(",", Enumerable.Repeat("VOID", 500)) ' same name generate repeatly.
+
+output
+=======
+1
+2
+3
+4
+5
+.
+.
+.
+.
+10000
