@@ -1,0 +1,23 @@
+SQL SERVER PROCESS KILL WHEN SPID UTILIZING FOR MEMORY AND DISK SPACE
+
+
+STEP 1
+========
+•	Execute the below query to identify which SPID has been blocking.
+•	Then execute the KILL command with SPID. 
+SELECT 
+    session_id AS SPID,
+    blocking_session_id AS BlockingSPID,
+    wait_type,
+    wait_time,
+    status
+KILL <SPID>;
+
+
+STEP 2
+=========
+•	Execute the below query and after execution list of SPID and Commands running currently.
+•	To find which CPU time and DISK IO is high and status is Sleeping.
+•	EXEC sp_who2;
+•	Then execute KILL command with SPID which is high CPUtime , DISKIO and status Sleeping
+KILL <SPID>;
