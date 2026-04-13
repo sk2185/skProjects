@@ -10,6 +10,9 @@ SELECT
     wait_type,
     wait_time,
     status
+FROM sys.dm_exec_requests
+WHERE blocking_session_id <> 0;
+
 KILL <SPID>;
 
 STEP 2
