@@ -1,0 +1,27 @@
+Random number generation with unique values
+================================================
+
+*) User needs to generate 6 digits unique random values. 
+
+
+ Dim rnd As New Random()
+ Dim count as integer = 400000
+ Dim uniqueNumbers As List(Of Integer) = Enumerable.Range(100000, 900000) _
+                        .OrderBy(Function(x) rnd.Next()) _
+                        .Take(count) _
+                        .ToList()
+
+ For i as Integer =0 to uniqueNumbers.count-1
+  Console.WriteLine(uniqueNumbers(i).ToString())
+ Next
+
+
+Output
+=========
+123456
+654788
+127885
+.
+.
+.
+225477
