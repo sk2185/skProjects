@@ -7,12 +7,12 @@ Some fixed string will use repeatly
 
 VB.NET
 ==========
-Dim repeatedstring As String = String.Join(",", Enumerable.Repeat("VOID", 500)) ' same name generate repeatly.
+Dim repeatedstring As String = String.Join(",", Enumerable.Repeat("Dummy", 500)) ' same name generate repeatly.
 
 
 Output
 =======
-"VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID","VOID"...."VOID" 
+"Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy","Dummy"...."Dummy" 
 
 this void generated 500 times with comma separated. 
 
@@ -26,14 +26,14 @@ Convert to List
 
 Output
 =========
-"VOID"
-"VOID"
-"VOID"
-"VOID"
-"VOID"
-"VOID"
+"Dummy"
+"Dummy"
+"Dummy"
+"Dummy"
+"Dummy"
+"Dummy"
 .
 .
 .
 .
-"VOID" 
+"Dummy" 
