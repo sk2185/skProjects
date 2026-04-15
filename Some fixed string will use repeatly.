@@ -7,7 +7,7 @@ Some fixed string will use repeatly
 
 VB.NET
 ==========
-Dim repeatedstring As String = String.Join(",", Enumerable.Repeat("Dummy", 500)) ' same name generate repeatly.
+Dim repeatedstring As String = String.Join(",", Enumerable.Repeat("Dummy", 500)) ' same string need to generate repeatly.
 
 
 Output
