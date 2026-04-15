@@ -1,7 +1,8 @@
 Random number generation with unique values
 ================================================
 
-*) User needs to generate 6 digits unique random values. 
+*) User needs to generate 6 digits random values. 
+*) To generate with unique values without duplicates. 
 
 
  Dim rnd As New Random()
