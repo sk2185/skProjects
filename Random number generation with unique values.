@@ -5,17 +5,45 @@ Random number generation with unique values
 *) To generate with unique values without duplicates. 
 
 
+Code:
+=======
+VB.NET
+=====
  Dim rnd As New Random()
  Dim count as integer = 400000
  Dim uniqueNumbers As List(Of Integer) = Enumerable.Range(100000, 900000) _
-                        .OrderBy(Function(x) rnd.Next()) _
-                        .Take(count) _
-                        .ToList()
-
+ .OrderBy(Function(x) rnd.Next()) _
+ .Take(count) _
+ .ToList()
  For i as Integer =0 to uniqueNumbers.count-1
-  Console.WriteLine(uniqueNumbers(i).ToString())
+ Console.WriteLine(uniqueNumbers(i).ToString())
  Next
+Output
+=========
+123456
+654788
+127885
+.
+.
+.
+225477
+https://lnkd.in/dQTmQMWY
 
+C#
+==
+
+Random rnd = new Random();
+ Int32 count = 400000;
+ List<String> uniqueNumbers = Enumerable.Range(100000, 900000) 
+ .OrderBy(x=> rnd.Next())
+ .Select(x=> x.ToString())
+ .Take(count)
+ .ToList();
+ 
+ for(int i =0; i<= uniqueNumbers.Count()-1; i++)
+ {
+ Console.WriteLine(uniqueNumbers[i]);
+ }
 
 Output
 =========
@@ -26,3 +54,5 @@ Output
 .
 .
 225477
+
+https://lnkd.in/d476DugU
