@@ -1,0 +1,62 @@
+Working with huge datasets in LINQ vb and C#
+==============================================
+
+LINQ makes chunking, appending, and writing files surprisingly elegant — no complex loops, no manual counters.
+Today I generated 450,000 zero‑padded numbers, split them into 100k‑sized chunks, appended them to a master file, and also wrote each chunk to its own file.
+All with clean, functional VB and C#.
+
+🧪 C# Implementation
+=================
+IEnumerable<string> numberslist =
+    Enumerable.Range(1, 450000).Select(x => x.ToString("000000"));
+Int32 chunkSize = 100000;
+List<List<string>> chunkedNumberList = numberslist
+  .Select((value, index) => new { Value = value, Index = index })
+  .GroupBy(x => x.Index / chunkSize)
+  .Select(g => g.Select(x => x.Value).ToList())
+  .ToList();
+
+chunkedNumberList.ForEach(x =>
+{
+    string filePath = "d:\\output_csharp.txt";
+    File.AppendAllLines(filePath, x);
+});
+Int32 fcnt = 1;
+chunkedNumberList.ForEach(x =>
+{
+    string filePath = $"d:\\output_csharp_"+ fcnt.ToString("000") +".txt";
+    File.WriteAllLines (filePath, x);
+    fcnt ++;
+});
+
+
+🧪 VB.NET Implementation
+===================
+        Dim numberlist As IEnumerable(Of String) =
+    Enumerable.Range(1, 450000).Select(Function(i) i.ToString("000000"))
+        Dim chunkSize As Integer = 100000
+        Dim chunkednumberList As List(Of List(Of String)) = numberlist _
+       .Select(Function(value, index) New With {.Value = value, .Index = index}) _
+       .GroupBy(Function(x) x.Index \ chunkSize) _
+       .Select(Function(g) g.Select(Function(x) x.Value).ToList()) _
+       .ToList()
+        ' Write each chunk to a one file.  
+        chunkednumberList.ForEach(Sub(chunk)
+                                      Dim filePath As String = "D:\output_vb.txt"
+                                      File.AppendAllLines(filePath, chunk)
+                                  End Sub)
+        'write each chunk to a separate file.
+       Dim fcnt As Integer = 1
+ chunkednumberList.ForEach(Sub(chunk)
+                               Dim filePath As String = $"D:\output_vb_{fcnt.ToString("000")
+}.txt"
+                               fcnt += 1
+                               File.AppendAllLines(filePath, chunk)
+                           End Sub)
+
+                                  End Sub)
+✅ Advantages 
+Clean and readable LINQ pipeline — chunking, grouping, and indexing are handled elegantly without manual loops.
+Flexible output handling — easily supports both appending to a master file and writing separate chunk files.
+⚠️ Disadvantages 
+High memory usage — the entire dataset and all chunk lists are fully materialized in memory.
