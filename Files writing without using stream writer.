@@ -1,0 +1,45 @@
+Files writing without using stream writer. 
+
+When you're generating large synthetic datasets or building automation utilities, you don’t always need the full control of StreamWriter. For bulk, sequential writes, File.WriteAllLines is a surprisingly efficient abstraction — and under the hood, it still uses buffered I/O.
+
+🔍 Why File.WriteAllLines Works Well for Bulk Output
+File.WriteAllLines internally:
+Allocates a UTF‑8 encoded stream
+Buffers writes efficiently
+Flushes once at the end
+Avoids manual disposal logic
+Reduces boilerplate and cognitive overhead
+For workloads where the entire dataset fits comfortably in memory, this is both fast and clean.
+
+🧪 VB.NET Implementation
+===================
+Dim numberlist As IEnumerable(Of String) =
+    Enumerable.Range(1, 400000).Select(Function(i) i.ToString("000000"))
+
+File.WriteAllLines("D:\output_vb.txt",
+                   numberlist.ToArray(),
+                   Encoding.UTF8)
+
+🧪 C# Implementation
+=================
+IEnumerable<string> numberslist =
+    Enumerable.Range(1, 400000).Select(x => x.ToString("000000"));
+
+File.WriteAllLines("D:\\output_csharp.txt",
+                   numberslist.ToArray(),
+                   Encoding.UTF8);
+
+📈 Performance Notes
+Enumerable.Range is extremely efficient — it avoids allocations and iterates lazily.
+Converting to an array (ToArray()) ensures a single pass and a contiguous memory block.
+UTF‑8 encoding keeps file size compact and predictable.
+For 400k lines, memory footprint is modest (~3–4 MB depending on padding).
+Disk write time is dominated by I/O throughput, not CPU.
+If you need streaming for very large datasets (millions of lines), StreamWriter or FileStream with chunked writes becomes the better choice. But for mid‑sized synthetic data generation, this approach is ideal.
+
+🧰 When to Use This Pattern
+Use File.WriteAllLines when:
+The dataset fits in memory
+You want clean, readable code
+You’re generating test data, mock files, or ETL inputs
+You want predictable UTF‑8 output without manual stream handling
