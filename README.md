@@ -1,6 +1,6 @@
 🚀 skProjects — High‑Tech Utility & Automation Suite
 A curated collection of automation tools, SFTP services, Excel‑based utilities, and data‑processing modules designed for real‑world productivity, enterprise workflows, and system integration.
-
+---
 🧩 Project Overview
 This repository contains multiple standalone tools built for:
 
