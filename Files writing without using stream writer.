@@ -12,7 +12,7 @@ Reduces boilerplate and cognitive overhead
 For workloads where the entire dataset fits comfortably in memory, this is both fast and clean.
 
 🧪 VB.NET Implementation
-===================
+---
 Dim numberlist As IEnumerable(Of String) =
     Enumerable.Range(1, 400000).Select(Function(i) i.ToString("000000"))
 
