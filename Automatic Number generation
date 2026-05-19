@@ -3,7 +3,7 @@
 
 VB.NET
 ============
-Dim numbers As IEnumerable(Of Integer) = Enumerable.Range(1, 1000) ' number generation
+Dim numbers As IEnumerable(Of Integer) = Enumerable.Range(1, 10000) ' number generation
 
 
 For i as integer =0 to numbers.count-1
