@@ -1,6 +1,5 @@
 # 🚀 skProjects  
-A collection of practical automation tools, utilities, and integration scripts created to simplify daily workflows.  
-This repository includes SFTP services, Excel automation, number‑processing utilities, and more.
+Automation suite featuring SFTP monitoring services, Windows‑based file‑checking tools, Excel VBA email automation, and data‑processing utilities for enterprise workflows.
 
 ---
 
