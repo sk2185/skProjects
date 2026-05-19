@@ -1,126 +1,74 @@
-#🚀 skProjects — High‑Tech Utility & Automation Suite
-A curated collection of automation tools, SFTP services, Excel‑based utilities, and data‑processing modules designed for real‑world productivity, enterprise workflows, and system integration.
+# 🚀 skProjects  
+A collection of practical automation tools, utilities, and integration scripts created to simplify daily workflows.  
+This repository includes SFTP services, Excel automation, number‑processing utilities, and more.
+
 ---
-### 🧩 Project Overview
-This repository contains multiple standalone tools built for:
 
-Enterprise SFTP automation
+## 📂 Project Contents
 
-File monitoring & notification services
+### 🔹 1. Find Numbers From List  
+**File:** `Findnumbersfromlist.zip`  
+A small utility that extracts, filters, and processes numbers from large datasets or mixed‑content lists.  
+Useful for data cleaning, validation, and preprocessing tasks.
 
-Excel‑based email automation
+---
 
-Data extraction & processing utilities
+### 🔹 2. SFTP Notification Service  
+**File:** `SFTPNotificationService Installation and Configuration.pdf`  
+A complete guide for installing and configuring an SFTP‑based notification service.  
+This service can:  
+- Monitor SFTP folders  
+- Trigger alerts when files arrive  
+- Support automated workflows for legacy SFTP servers  
 
-Each module is packaged independently and can be used as a plug‑and‑play component in your workflow.
+---
 
-### 🛠️ Included Modules
-🔹 1. Find Numbers From List
-File: Findnumbersfromlist.zip  
-A lightweight utility that extracts numeric values from mixed datasets.
-Ideal for:
+### 🔹 3. Send Mail From Multiple Outlook Accounts  
+**File:** `Sendmailfrommultipleoutlookaccounts.xlsm`  
+An Excel‑based automation tool (VBA) that allows sending emails from **multiple Outlook accounts**.  
+Features include:  
+- Multi‑account selection  
+- Automated email formatting  
+- Bulk sending support  
 
-Data cleaning
+---
 
-Pre‑processing
+### 🔹 4. SFTP File Checking Service  
+**File:** `sFTPFileCheckingService.zip`  
+A lightweight service that checks SFTP directories for new or missing files.  
+Ideal for:  
+- Scheduled file monitoring  
+- Automated integrations  
+- Legacy SFTP workflows  
 
-Validation pipelines
+---
 
-Key Features
+## 🛠️ Technologies Used
+- **VB.NET / .NET Framework**
+- **Excel VBA**
+- **SFTP / SSH**
+- **Windows Services**
+- **Automation Scripts**
 
-Fast numeric extraction
+---
 
-Handles large lists
+## 📘 How to Use  
+Each project is packaged individually.  
+1. Download the ZIP file  
+2. Extract the contents  
+3. Follow the included instructions (PDF or README inside each project)
 
-Zero‑dependency utility
+---
 
-🔹 2. SFTP Notification Service
-File: SFTPNotificationService Installation and Configuration.pdf  
-A configurable service that monitors SFTP directories and triggers notifications when files arrive.
+## 🤝 Contributions  
+This repository is a personal collection of tools.  
+If you want improvements or new features, feel free to open an issue.
 
-Capabilities
+---
 
-Real‑time SFTP monitoring
+## 📬 Contact  
+If you want help customizing any of these tools, reach out via GitHub or LinkedIn.
 
-Email/SMS/Log‑based alerts
+---
 
-Works with legacy SFTP servers
-
-Production‑ready configuration guide
-
-🔹 3. Send Mail From Multiple Outlook Accounts
-File: Sendmailfrommultipleoutlookaccounts.xlsm  
-An Excel‑VBA automation tool that sends emails from multiple Outlook accounts.
-
-Highlights
-
-Multi‑account selection
-
-Bulk email support
-
-Custom templates
-
-Zero installation — Excel only
-
-🔹 4. SFTP File Checking Service
-File: sFTPFileCheckingService.zip  
-A scheduled service that checks SFTP directories for missing or new files.
-
-Use Cases
-
-Daily file arrival checks
-
-Automated integrations
-
-Legacy system compatibility
-
-⚙️ Tech Stack
-VB.NET / .NET Framework
-
-Excel VBA
-
-Windows Services
-
-SFTP / SSH Protocols
-
-Automation & Integration Tools
-
-
-
-
-📦 How to Use
-Each project is packaged individually.
-
-Download the ZIP file
-
-Extract the contents
-
-Follow the included documentation (PDF or internal README)
-
-Run or integrate the tool into your workflow
-
-🧠 Why This Repository Exists
-This repo is a growing collection of tools built to solve real enterprise problems — SFTP automation, email workflows, data extraction, and system monitoring.
-
-If you work with:
-
-Legacy systems
-
-SFTP integrations
-
-Excel‑based automation
-
-Windows services
-
-…you’ll find these tools extremely useful.
-
-⭐ Support the Project
-If these tools help you, consider giving the repo a star — it motivates future updates and new utilities.
-
-🤝 Contributions
-This is a personal toolkit, but suggestions are welcome.
-Open an issue if you want enhancements or new features.
-
-📬 Contact
-For customization, improvements, or consulting:
-GitHub: sk2185
+⭐ **If you like these utilities, consider giving the repo a star!**
