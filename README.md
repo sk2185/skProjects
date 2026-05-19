@@ -1,7 +1,7 @@
-🚀 skProjects — High‑Tech Utility & Automation Suite
+#🚀 skProjects — High‑Tech Utility & Automation Suite
 A curated collection of automation tools, SFTP services, Excel‑based utilities, and data‑processing modules designed for real‑world productivity, enterprise workflows, and system integration.
 ---
-🧩 Project Overview
+### 🧩 Project Overview
 This repository contains multiple standalone tools built for:
 
 Enterprise SFTP automation
@@ -14,7 +14,7 @@ Data extraction & processing utilities
 
 Each module is packaged independently and can be used as a plug‑and‑play component in your workflow.
 
-🛠️ Included Modules
+### 🛠️ Included Modules
 🔹 1. Find Numbers From List
 File: Findnumbersfromlist.zip  
 A lightweight utility that extracts numeric values from mixed datasets.
